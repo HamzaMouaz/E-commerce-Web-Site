@@ -1,0 +1,13 @@
+<h2>Passer à la Caisse</h2>
+<p>Total à payer: {{ total }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Payer</button>
+</form>
+<br>
+
+<a href="{% url 'cart_detail' %}">Revenir au Panier</a>
+<br>
+
+<a href="{% url 'index' %}">Revenir au Produits</a>
